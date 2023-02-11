@@ -1,3 +1,4 @@
+#include "build_credentials.h"
 void setEnableWifi()
 {
 	doEnableWifi = true;
@@ -95,7 +96,7 @@ void ICACHE_FLASH_ATTR fallbacktoAPMode()
 	WiFi.softAPmacAddress(macAddr);
 	char ssid[15];
 	sprintf(ssid, "ESP-RFID-%02x%02x%02x", macAddr[3], macAddr[4], macAddr[5]);
-	if (WiFi.softAP(ssid))
+	if (WiFi.softAP(ssid, wifiAPPassword))
 	{
 		ledWifiOn();
 #ifdef DEBUG
