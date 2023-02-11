@@ -1,6 +1,14 @@
 # vscode
 .vscode
 
+# idea
+.idea/
+CMakeLists.txt
+CMakeListsPrivate.txt
+cmake-build-debug/
+cmake-build-generic/
+cmake-build-relayboard/
+
 # platformio
 
 .pioenvs
